@@ -13,6 +13,7 @@ require "action_text/engine"
 require "action_view/railtie"
 require "action_cable/engine"
 require "sprockets/railtie"
+
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -31,7 +32,10 @@ module WonderfulPostApp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-
+    config.i18n.default_locale = :ja
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+    config.time_zone = 'Tokyo'
+    config.active_record.default_timezone = :local
     # Don't generate system test files.
     config.generators.system_tests = nil
     config.generators do |g|

@@ -51,3 +51,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rails-i18n', '~> 6.0.0'
+gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+gem 'kaminari'
+gem 'jsbundling-rails'
